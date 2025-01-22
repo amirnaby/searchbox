@@ -1,0 +1,42 @@
+/* Custom CSS for the project */
+
+/* Autocomplete dropdown styling */
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+    list-style: none;
+}
+
+.ui-autocomplete li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.ui-autocomplete li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Additional custom styles */
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.btn-sm {
+    margin: 2px;
+}
