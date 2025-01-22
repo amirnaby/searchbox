@@ -3,6 +3,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 $isAdmin = isset($_SESSION['admin_logged_in']);
+
+if (!file_exists('data.json')) {
+    file_put_contents('data.json', json_encode([]));
+}
 ?>
 
 <!DOCTYPE html>

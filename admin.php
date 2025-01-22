@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Check for duplicates
         $duplicate = false;
         foreach ($data as $item) {
-            if ($item['name'] === $name || $item['code'] === $code) {
+            if ($item['name'] === $name || $item['code'] === $code || $item['id'] === $id) {
                 $duplicate = true;
                 break;
             }
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $newId = intval(file_get_contents('last_id.txt')) + 1;
             $data[] = ['id' => $newId, 'name' => $name, 'code' => $code];
-            file_put_contents('data.json', json_encode($data));
+            file_put_contents('data.json', json_encode($data, JSON_UNESCAPED_UNICODE)); // Save in UTF-8
             file_put_contents('last_id.txt', $newId);
         }
     } elseif (isset($_POST['edit'])) {
