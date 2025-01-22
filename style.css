@@ -5,13 +5,12 @@ body {
 
 td, th {
     text-align: center;
-	vertical-align: middle;
+	max-width: 25vw;
 }
 
-.flex {
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+thead {
+	position: sticky;
+    top: 0;
 }
 
 .btn-sm {
@@ -49,4 +48,21 @@ td, th {
 
 .autocomplete-item:hover {
     background-color: #f8f9fa;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.page-link {
+    color: #28a745;
+}
+
+.page-link:hover {
+    color: #218838;
 }
