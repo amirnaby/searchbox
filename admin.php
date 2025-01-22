@@ -86,12 +86,11 @@ unset($_SESSION['error']);
 	<div class="card shadow">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
 			<h1 class="card-title mb-0">Admin Panel</h1>
-		
-        <?php if ($error): ?>
-            <div class="alert alert-danger"><?= $error ?></div>
-        <?php endif; ?>
 		</div>
 		<div class="card-body">
+		<?php if ($error): ?>
+            <div class="alert alert-danger"><?= $error ?></div>
+        <?php endif; ?>
         <button class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#addModal">Add new record</button>
 
         <table class="table table-bordered">
@@ -109,10 +108,10 @@ unset($_SESSION['error']);
                         <td><?= $item['id'] ?></td>
                         <td><?= $item['name'] ?></td>
                         <td><?= $item['code'] ?></td>
-                        <td>
-                            <button class="btn btn-warning btn-sm w-25" data-bs-toggle="modal" data-bs-target="#editModal" 
+                        <td class="flex">
+                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" 
                                     data-id="<?= $item['id'] ?>" data-name="<?= $item['name'] ?>" data-code="<?= $item['code'] ?>">Edit</button>
-                            <button class="btn btn-danger btn-sm w-25" onclick="confirmDelete(<?= $item['id'] ?>)">Delete</button>
+                            <button class="btn btn-danger btn-sm" onclick="confirmDelete(<?= $item['id'] ?>)">Delete</button>
                         </td>
                     </tr>
                 <?php endforeach; ?>

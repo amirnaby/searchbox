@@ -5,6 +5,17 @@ body {
 
 td, th {
     text-align: center;
+	vertical-align: middle;
+}
+
+.flex {
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.btn-sm {
+	margin: 5px;
 }
 
 #deleteConfirmationModal .modal-content {
