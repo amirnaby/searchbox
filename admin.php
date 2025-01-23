@@ -167,6 +167,11 @@ $paginatedData = array_slice($filteredData, $offset, $perPage);
 		</div>
 		
 		<div class="d-flex justify-content-sm-around align-items-center flex-wrap justify-content-center">
+			<!-- Total Results -->
+		        <div class="text-center">
+			    Total results: <?= $totalItems ?>
+		        </div>
+            
 			<!-- Page Size Drop-Down -->
 			<div class="d-flex align-items-center">
 				<label class='m-3'>Page size: </label>
